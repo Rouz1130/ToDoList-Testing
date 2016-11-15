@@ -22,6 +22,11 @@ namespace ToDoList.Controllers
         public IActionResult Details(int id)
         {
             var thisItem = db.Items.FirstOrDefault(items => items.ItemId == id);
+            //(items => items.ItemId == id) is a boolean
+            //statement on the right of =  a database.Table.Method(for each item in the database, check if the item's id the same as id is true
+            //if it is add the item to the View(thisItem) if false, don't add it to thisItem.
+            // we can also name it foos => foos & still works b/c what we are looking for is the boolean of the ItemId from the database
+
             return View(thisItem);
         }
         public IActionResult Create()
