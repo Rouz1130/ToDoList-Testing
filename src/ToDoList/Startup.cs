@@ -45,6 +45,7 @@ namespace ToDoList
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             //2
             app.UseMvc(routes =>
             {
